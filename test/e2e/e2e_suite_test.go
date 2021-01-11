@@ -154,7 +154,6 @@ func execTestCmd(cmds []testCmd) {
 
 	projectRoot, err := os.Getwd()
 	gomega.Expect(err).NotTo(gomega.HaveOccurred())
-	gomega.Expect(strings.HasSuffix(projectRoot, "csi-driver-nfs")).To(gomega.Equal(true))
 
 	for _, cmd := range cmds {
 		log.Println(cmd.startLog)
